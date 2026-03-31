@@ -2,8 +2,6 @@ name: Build Android APK
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ "main" ]
 
 jobs:
   build:
@@ -16,4 +14,5 @@ jobs:
       - name: Build APK with Buildozer
         uses: digreatbrian/buildozer-action@v2
         with:
-          command: buildozer android release
+          buildozer-cmd: buildozer android debug
+``
